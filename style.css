@@ -1,0 +1,385 @@
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5f1;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #1a3a63, #2d5f8b);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-book {
+    margin-right: 0.75rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+}
+
+.grid-layout {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #f2f7fc;
+    padding: 1.25rem;
+    border-bottom: 1px solid #e5edf5;
+}
+
+.card-title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.card-title-wrapper svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    color: #1a3a63;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    color: #1a3a63;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-description {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2d5f8b;
+    box-shadow: 0 0 0 3px rgba(45, 95, 139, 0.1);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 0.875rem;
+}
+
+.btn svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #1a3a63;
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #2d5f8b;
+}
+
+.btn-icon {
+    padding: 0.375rem;
+    border-radius: 4px;
+    color: #dc3545;
+    background: transparent;
+}
+
+.btn-icon:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Table Styles */
+.table-container {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f7fc;
+}
+
+th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #495057;
+}
+
+td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.875rem;
+    vertical-align: middle;
+}
+
+tr:hover {
+    background-color: #f9fafc;
+}
+
+.actions-column {
+    text-align: right;
+    width: 80px;
+}
+
+/* Buttons in tables */
+.delete, .return {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.delete {
+    color: #dc3545;
+}
+
+.return {
+    color: #28a745;
+}
+
+.delete:hover, .return:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.delete svg, .return svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+.empty-state svg {
+    opacity: 0.2;
+    margin-bottom: 1rem;
+}
+
+.empty-state-subtitle {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    color: #adb5bd;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    max-width: 300px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Icons */
+.icon-trash {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+    color: #dc3545;
+}
+
+/* Borrower-specific styles */
+.overdue {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.icon-user, .icon-clock {
+    margin-right: 0.75rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #e9ecef;
+        margin-bottom: 0.625rem;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #e9ecef;
+        position: relative;
+        padding-left: 40%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 0.75rem;
+        left: 1rem;
+        width: 35%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+    }
+
+    /* Book list labels */
+    #book-table-body td:nth-of-type(1):before { content: "Title"; }
+    #book-table-body td:nth-of-type(2):before { content: "Author"; }
+    #book-table-body td:nth-of-type(3):before { content: "ISBN"; }
+    #book-table-body td:nth-of-type(4) {
+        text-align: center;
+        padding-left: 1rem;
+    }
+    
+    /* Borrower list labels */
+    #borrowers-table-body td:nth-of-type(1):before { content: "Student Name"; }
+    #borrowers-table-body td:nth-of-type(2):before { content: "Book Title"; }
+    #borrowers-table-body td:nth-of-type(3):before { content: "Borrowed Date"; }
+    #borrowers-table-body td:nth-of-type(4):before { content: "Due Date"; }
+    #borrowers-table-body td:nth-of-type(5) {
+        text-align: center;
+        padding-left: 1rem;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.25rem;
+    }
+}
