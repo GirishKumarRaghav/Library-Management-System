@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# Library Management System
 
-## Project info
+A simple web-based Library Management System that allows users to manage book collections and track borrowers. This project is built using **HTML**, **CSS**, and **JavaScript** with a responsive and user-friendly interface.
 
-**URL**: https://lovable.dev/projects/de50b7b8-3455-4595-81b0-e33b70748719
+## Features
 
-## How can I edit this code?
+- 📚 Add, view, and delete books with title, author, and ISBN.
+- 👩‍🎓 Track borrowers and loaned books.
+- ⏰ Due date selection with overdue indication.
+- 🔔 Toast notifications for actions like add, delete, loan, and return.
+- 📱 Responsive layout for both desktop and mobile devices.
 
-There are several ways of editing your application.
+## Files
 
-**Use Lovable**
+- `index.html` – Main HTML structure and layout.
+- `style.css` – Stylesheet for the visual design and responsiveness.
+- `scripts.js` – JavaScript logic for managing books, borrowers, and UI updates.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/de50b7b8-3455-4595-81b0-e33b70748719) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+No installation or dependencies required. Just a modern web browser.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### How to Run
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Download or clone the repository.
+2. Open `index.html` in your browser.
 
-Follow these steps:
+### Optional: Use Live Server (for developers)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+If you're using VSCode or another IDE with Live Server:
+1. Right-click `index.html` > "Open with Live Server".
+2. View changes in real-time.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Usage
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Add a Book
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- Fill in the book's **Title**, **Author**, and **ISBN**.
+- Click "Add Book" to add it to the collection.
 
-**Edit a file directly in GitHub**
+### Loan a Book
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Enter the **Student Name**, select a **Book**, and choose a **Due Date**.
+- Click "Loan Book" to assign it.
 
-**Use GitHub Codespaces**
+### Return a Book
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Click the return icon (green book) next to the borrower's entry to mark the book as returned.
 
-## What technologies are used for this project?
+### Delete a Book
 
-This project is built with:
+- Use the red trash icon to delete a book from your library.
+- Books that are currently loaned out cannot be deleted.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## License
 
-## How can I deploy this project?
+This project is licensed under the MIT License.
 
-Simply open [Lovable](https://lovable.dev/projects/de50b7b8-3455-4595-81b0-e33b70748719) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Enjoy managing your library!
