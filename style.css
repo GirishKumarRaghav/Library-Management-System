@@ -377,6 +377,7 @@ tr:hover {
     #borrowers-table-body td:nth-of-type(5) {
         text-align: center;
         padding-left: 1rem;
+        background:blue;
     }
 
     .btn-primary {
