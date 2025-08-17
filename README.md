@@ -1,127 +1,64 @@
 
 # Library Management System
 
-A modern, responsive web application for managing a small library's collection of books and tracking borrowers.
-
----
+A simple web-based Library Management System that allows users to manage book collections and track borrowers. This project is built using **HTML**, **CSS**, and **JavaScript** with a responsive and user-friendly interface.
 
 ## Features
 
-### 📚 Book Management
-- Add new books with title, author, and ISBN
-- View a complete list of books in inventory
-- Delete books from the collection when necessary
-- Visual empty state indicators
+- 📚 Add, view, and delete books with title, author, and ISBN.
+- 👩‍🎓 Track borrowers and loaned books.
+- ⏰ Due date selection with overdue indication.
+- 🔔 Toast notifications for actions like add, delete, loan, and return.
+- 📱 Responsive layout for both desktop and mobile devices.
 
-### 👥 Borrower Tracking
-- Loan books to students/patrons
-- Track due dates with automatic overdue highlighting
-- Process book returns
-- View all currently borrowed books
+## Files
 
-### 💡 User Experience
-- Modern card-based interface
-- Responsive design that works on mobile and desktop
-- Toast notifications for user actions
-- Real-time validation and error handling
+- `index.html` – Main HTML structure and layout.
+- `style.css` – Stylesheet for the visual design and responsiveness.
+- `scripts.js` – JavaScript logic for managing books, borrowers, and UI updates.
 
----
-
-## 🛠 Technologies Used
-- **HTML5** – Semantic markup structure
-- **CSS3** – Custom styling with responsive design principles
-- **JavaScript (ES6+)** – Core functionality with vanilla JavaScript
-- **SVG Icons** – Lightweight, scalable icons
-- **Local Storage** – Coming soon: data persistence between sessions
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Any modern web browser (Chrome, Firefox, Safari, Edge)
-- No server setup or database required
 
-### Installation
+No installation or dependencies required. Just a modern web browser.
 
-Clone this repository:
+### How to Run
 
-```bash
-git clone https://github.com/yourusername/library-management-system.git
-```
+1. Download or clone the repository.
+2. Open `index.html` in your browser.
 
-Open the project folder:
+### Optional: Use Live Server (for developers)
 
-```bash
-cd library-management-system
-```
+If you're using VSCode or another IDE with Live Server:
+1. Right-click `index.html` > "Open with Live Server".
+2. View changes in real-time.
 
-Launch the application:
-- Double-click on the `index.html` file, or
-- Use a local development server like **Live Server** in VS Code
+## Usage
 
----
+### Add a Book
 
-## 📘 Usage Guide
+- Fill in the book's **Title**, **Author**, and **ISBN**.
+- Click "Add Book" to add it to the collection.
 
-### ➕ Adding a New Book
-1. Fill in the book details (title, author, ISBN) in the **"Add a New Book"** form
-2. Click **"Add Book"** to save it to your collection
-3. The book will appear in the **"Book List"** section
+### Loan a Book
 
-### 📤 Loaning Books
-1. Select a student name, book, and due date in the **"Loan a Book"** form
-2. Click **"Loan Book"** to register the borrowing
-3. The loan will appear in the **"Borrowers"** section
+- Enter the **Student Name**, select a **Book**, and choose a **Due Date**.
+- Click "Loan Book" to assign it.
 
-### 📥 Returning Books
-1. Find the borrowed book in the **"Borrowers"** section
-2. Click the **return button (book icon)** to process the return
-3. The book will be available for loan again
+### Return a Book
 
----
+- Click the return icon (green book) next to the borrower's entry to mark the book as returned.
 
-## 🌐 Browser Compatibility
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+### Delete a Book
+
+- Use the red trash icon to delete a book from your library.
+- Books that are currently loaned out cannot be deleted.
+
+## License
+
+This project is licensed under the MIT License.
 
 ---
 
-## 🔮 Future Enhancements
-- ✅ Data persistence using LocalStorage
-- 📁 Book categories and filtering options
-- 🔍 Advanced search functionality
-- 👤 User accounts and authentication
-- 📊 Reports and statistics
-
----
-
-## 🗂 Project Structure
-
-```
-library-management-system/
-├── index.html           # Main HTML structure
-├── style.css            # All styling definitions
-├── scripts.js           # JavaScript functionality
-└── README.md            # Project documentation
-```
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙌 Acknowledgements
-
-- Icons provided by [Feather Icons](https://feathericons.com/)
-- Font families by [Google Fonts](https://fonts.google.com/)
-- Color palette inspired by modern library designs
-
----
-
-> Created with ❤️ by **Girish Kumar Raghav**
+Enjoy managing your library!

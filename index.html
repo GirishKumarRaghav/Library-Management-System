@@ -4,42 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Management System</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Library Management System2</h1>
+        <div class="container">
+            <div class="header-content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-book"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+                <h1>Library Management System</h1>
+            </div>
+        </div>
     </header>
     <main>
-        <section id="add-book">
-            <h2>Add a New Book</h2>
-            <form id="book-form">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-                <label for="author">Author:</label>
-                <input type="text" id="author" name="author" required>
-                <label for="isbn">ISBN:</label>
-                <input type="text" id="isbn" name="isbn" required>
-                <button type="submit">Add Book</button>
-            </form>
-        </section>
-        <section id="book-list">
-            <h2>Book List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>ISBN</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="book-table-body">
-                    <!-- Book items will be appended here by JavaScript -->
-                </tbody>
-            </table>
-        </section>
+        <div class="container grid-layout">
+            <section id="add-book" class="card">
+                <div class="card-header">
+                    <div class="card-title-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-plus"><path d="M12 5v14M5 12h14"></path></svg>
+                        <h2>Add a New Book</h2>
+                    </div>
+                    <p class="card-description">Enter the details of the book you'd like to add to your collection</p>
+                </div>
+                <div class="card-content">
+                    <form id="book-form">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" placeholder="Enter book title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" name="author" placeholder="Enter author name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="isbn">ISBN</label>
+                            <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-plus"><path d="M12 5v14M5 12h14"></path></svg>
+                            Add Book
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <section id="book-list" class="card">
+                <div class="card-header">
+                    <div class="card-title-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-book"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+                        <h2>Book List</h2>
+                    </div>
+                    <p class="card-description" id="book-count">Your library is empty. Add some books!</p>
+                </div>
+                <div class="card-content">
+                    <div class="table-container">
+                        <div id="empty-state" class="empty-state">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-book"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+                            <p>No books in your library yet</p>
+                            <p class="empty-state-subtitle">Add your first book using the form</p>
+                        </div>
+                        <table id="books-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>ISBN</th>
+                                    <th class="actions-column">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="book-table-body">
+                                <!-- Book items will be appended here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- New borrower tracking section -->
+            <section id="borrowers" class="card">
+                <div class="card-header">
+                    <div class="card-title-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-user"><circle cx="12" cy="7" r="4"></circle><path d="M5.5 21v-2a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v2"></path></svg>
+                        <h2>Borrowers</h2>
+                    </div>
+                    <p class="card-description" id="borrowers-count">No active borrowers</p>
+                </div>
+                <div class="card-content">
+                    <div class="table-container">
+                        <div id="borrowers-empty-state" class="empty-state">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-user"><circle cx="12" cy="7" r="4"></circle><path d="M5.5 21v-2a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v2"></path></svg>
+                            <p>No active borrowers</p>
+                            <p class="empty-state-subtitle">Loan a book to add a borrower</p>
+                        </div>
+                        <table id="borrowers-table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Book Title</th>
+                                    <th>Borrowed Date</th>
+                                    <th>Due Date</th>
+                                    <th class="actions-column">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="borrowers-table-body">
+                                <!-- Borrower items will be appended here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loan book form -->
+            <section id="loan-book" class="card">
+                <div class="card-header">
+                    <div class="card-title-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <h2>Loan a Book</h2>
+                    </div>
+                    <p class="card-description">Record details of students borrowing books</p>
+                </div>
+                <div class="card-content">
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <label for="student-name">Student Name</label>
+                            <input type="text" id="student-name" name="student-name" placeholder="Enter student name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-select">Book</label>
+                            <select id="book-select" name="book-select" required>
+                                <option value="">Select a book</option>
+                                <!-- Book options will be added by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="due-date">Due Date</label>
+                            <input type="date" id="due-date" name="due-date" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Loan Book
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <span id="toast-message"></span>
+        </div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
